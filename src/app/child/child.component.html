@@ -1,0 +1,6 @@
+<!-- <h4>Send data parent to child component</h4>
+<p>{{item}}</p> -->
+
+<h4>Send data child to parent component</h4>
+<input type="text" #box />
+<button (click)="updateDataEvent.emit(box.value)">Update data</button>

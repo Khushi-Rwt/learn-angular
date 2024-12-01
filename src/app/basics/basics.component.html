@@ -1,0 +1,77 @@
+<h2>Angular</h2> 
+<button (click)="getData('hello')">Click here</button><br /><br />
+<input type="text" #keyupBox placeholder="event keyup" (keyup)="getData(keyupBox.value)" /><br/><br/>
+<input type="text" #keydownBox placeholder="event keydown" (keydown)="getData(keydownBox.value)"/><br/><br/>
+<input type="text" #blurBox placeholder="event blur" (blur)="getData(blurBox.value)" /><br/><br/>
+<input type="text" #inputBox placeholder="event input" (input)="getData(inputBox.value)"/><br/><br/>
+<h2 (mouseover)="getData('Hover')">This will print value in the console on hover.</h2>
+<h2 (mouseleave)="getData('Leave')">This will print value in the console on mouse leave.</h2>
+-----------------------------------------------------------------------------------------------------------------------------------<br/><br/>
+<!-- Get Input Box Value and Display -->
+<!-- <h2>{{title}}</h2> -->
+<input type="text" #inputValue placeholder="Enter Name" name="name"/><br/><br/>
+<button (click)="getValue(inputValue.value)">Click here</button>  
+<p>{{displayVal}}</p> 
+
+-----------------------------------------------------------------------------------------------------------------------------------<br/><br/>
+
+<!--  Counter   -->
+<h2>{{title}}</h2>
+<button (click)="Counter('Decrement')">--</button><br/><br/>
+<span>Counter : {{count}}</span><br/><br/>
+<button (click)="Counter('Increment')">++</button> 
+
+<h2 class="heading">HELLO WORLD!</h2>
+
+<!-- Property Binding -->
+<button (click)=getTrueFalse(true)>Disable</button>
+<button (click)=getTrueFalse(false)>Enable</button>
+<input type="text" value="{{name}}" disabled={{disable}}/>
+<input type="text" [value]=name [disabled]=disable />           
+
+<!-- if else  -->
+<h2>if else</h2>
+<div *ngIf="show">My name is Khushi</div>
+@if(show){
+    <p>This is true value</p>
+}@else{
+    <p>This is false value</p>
+}
+@if(show==false){
+    <button>Activated</button>
+}
+@else{
+    <button>Deactivated</button>
+}    
+
+<!--  Loop  -->
+<h2>Loop</h2>
+<p *ngFor="let color of colors">Color : {{color}}</p>
+<p *ngFor="let user of userDetails">{{user.name}} - {{user.age}}</p>
+
+<!-- Multidimensional loop -->
+<h2>Multidimensional loop</h2>
+<ul *ngFor="let user of users">
+    <li>{{user.name}}</li>
+    <li>{{user.age}}</li>
+    <li>{{user.city}} </li>
+    <li><strong>Social links</strong></li>
+    <ul *ngFor="let data of user.socialLinks">
+        <li>{{data}}</li>
+    </ul>
+</ul>
+
+<!-- Style binding -->
+<h2>Style binding</h2>
+<p [style.color]="color">Style binding</p>
+<button (click)="updateColor()">Click here to change text color</button>
+<br><br>
+
+<!-- Toggle element -->
+<h2>Toggle element</h2>
+<button (click)="toggleFunc()">Toggle</button>
+<h3 *ngIf="display">Heading</h3>
+
+<!-- Template Reference Variable -->
+<input type="text" #box placeholder="Enter username" />
+<button (click)="getTemplateData(box.value)">Click</button>
