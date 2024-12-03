@@ -1,0 +1,10 @@
+<!-- Template Driven Form -->
+
+<h1>{{title}}</h1>
+<form #loginForm="ngForm" (ngSubmit)=userLogin(loginForm.value)>
+    <input type="text" placeholder="Enter name" name="name" ngModel />
+    <br><br>
+    <input type="password" placeholder="Enter password" name="password" ngModel />
+    <br><br>
+    <button>Login</button>
+</form> 

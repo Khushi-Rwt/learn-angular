@@ -10,22 +10,24 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { ChildComponent } from './child/child.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { PipesComponent } from "./pipes/pipes.component";
+import { NewFormComponent } from "./new-form/new-form.component";
 
 @Component({
     selector: 'app-root',
     imports: [
-        RouterOutlet,
-        CommonModule,
-        BasicsComponent,
-        HeaderComponent,
-        FormsModule,
-        FormComponent,
-        MatSlideToggleModule,
-        TodoListComponent,
-        ChildComponent,
-        UserDetailsComponent,
-        PipesComponent
-    ],
+    RouterOutlet,
+    CommonModule,
+    BasicsComponent,
+    HeaderComponent,
+    FormsModule,
+    FormComponent,
+    MatSlideToggleModule,
+    TodoListComponent,
+    ChildComponent,
+    UserDetailsComponent,
+    PipesComponent,
+    NewFormComponent
+],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
